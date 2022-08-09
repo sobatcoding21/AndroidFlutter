@@ -1,7 +1,11 @@
 import 'package:androidflutter/views/device_info.dart';
 import 'package:androidflutter/views/dropdown_view.dart';
+import 'package:androidflutter/views/geomap_page.dart';
 import 'package:androidflutter/views/listview_pages.dart';
+//import 'package:androidflutter/views/login_local_page.dart';
 import 'package:androidflutter/views/login_page.dart';
+//import 'package:androidflutter/views/surat_view.dart';
+//import 'package:androidflutter/views/upload_local_page.dart';
 import 'package:androidflutter/views/upload_view.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +73,41 @@ class _PageHomeState extends State<PageHome> {
                           MaterialPageRoute(
                               builder: (_) => const UploadPage())),
                       child: const Text('Test Upload File'),
-                    ))
+                    )),
+                    Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const GeoMapPage())),
+                      child: const Text('Flutter Map'),
+                    )),
+                /*Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const PageLocalLogin())),
+                      child: const Text('Test Login Local'),
+                    )),
+                Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const UploadLocalPage())),
+                      child: const Text('Test Upload Local'),
+                    )),
+                Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => const PageSurat())),
+                      child: const Text('Test Another API'),
+                    ))*/
               ],
             )));
   }

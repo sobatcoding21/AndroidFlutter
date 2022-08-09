@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:androidflutter/models/cities.dart';
+import 'package:androidflutter/ui/listview_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -43,7 +44,9 @@ class _PageListViewState extends State<PageListView> {
 
   Widget bulidListItem(index) {
     var item = listCities[index];
-    return Card(
+
+    return ListKota(nama: item.name.toString());
+    /*return Card(
       child: ListTile(
         title:
             Text(item.name.toString(), style: const TextStyle(fontSize: 18.0)),
@@ -68,7 +71,7 @@ class _PageListViewState extends State<PageListView> {
                       icon: const Icon(Icons.delete)))
             ]),
       ),
-    );
+    );*/
   }
 
   @override
