@@ -1,5 +1,6 @@
 //import 'package:androidflutter/views/device_info.dart';
-import 'package:androidflutter/views/home.dart';
+//import 'package:androidflutter/views/home.dart';
+import 'package:androidflutter/views/splash_view.dart';
 //import 'package:androidflutter/views/dropdown_view.dart';
 //import 'package:androidflutter/views/login_page.dart';
 import 'package:flutter/material.dart';
@@ -20,13 +21,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routes: {
+      home: const SplashScreen(),
+      /*routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         //'/': (context) => const PageLogin(),
         //'/': (context) => const DropdownPage(),
         //'/': (context) => const DeviceInfoPage(),
-        '/': (context) => const PageHome(),
-      },
+        //'/': (context) => const PageHome(),
+      },*/
     );
   }
 }
